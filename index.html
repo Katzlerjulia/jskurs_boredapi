@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+   <script src="index.js" defer></script>
+  <title>Are you bored?</title>
+</head>
+<body>
+<header>
+      <nav class="navbar">
+        <div class="topnav">
+  <a class="active" href="index.html">Bored?</a>
+  <div class="topnav-right">
+    <a href="index.html">home</a>
+  </div>
+</div>
+      </nav>
+      <section class="hero">
+        <div class="grid-container">
+      <div id="hero-image"></div>
+      <div id="info">
+        <h2> <i>Bored?</i></h2>
+      <p>Är du trött på att stirra in i väggen hela dagen för att  ändå inte hitta något att göra och sen bara gå och lägga dig? Här kan du enkelt få förslag på vad du ska hitta på en dag när du har total idétorka! <br>
+      Fyll i formuläret och få roliga förslag anpassade efter din situation :)</p>
+      </div>
+      </div>
+      </section>
+    </header>
+    <Main>
+      <section class="form-section">
+
+        <fieldset class="formulär">
+<h1 class="idétorka">Låt mig hjälpa dig!</h1>
+          <form id="form">
+            <div>
+              <label for="namn" class="first-name">Namn:</label><br><br>
+              <input id="namn" type="text" name="first-name" ><br><br>
+            </div>
+            <div>
+              <label for="ensam-checkbox" class="number">Med vem vill du göra aktiviteten idag?</label> <br><br>
+              <input id="ensam-checkbox" name="radio-button" type="radio" value="radio-alone" > Mig själv
+              <input id="flera-checkbox" name="radio-button" type="radio" value="radio-many" > Med andra <br><br><br>
+            </div>
+            <div>
+              <label for="home-checkbox" class="place">Vart vill du utföra din aktivitet?</label><br><br>
+              <input id="home-checkbox" name="place-radio" type="radio" value="home" > Hemma
+              <input id="out-checkbox" name="place-radio" type="radio" value="out" > Ute <br><br><br>
+            </div>
+            <div class="get-options">
+              <input class="options-button" type="button" value="Ge mig förslag" onclick="radioOptions()">
+            </div>
+          </form>
+        </fieldset>
+      </section>
+    </Main>
+    <footer>
+      <p>©juliakatzler</p>
+    </footer>
+</body>
+</html>
