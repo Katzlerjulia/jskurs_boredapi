@@ -1,16 +1,17 @@
 :root {
   --one: white;
-  --two: #F73D98;
-  --three: #FF6DC5;
-  --four: #FF99CC;
-  --five: #FFC0E3;
   --six: #081826;
   --seven: #F6D5FF;
   --eight: #FF5555;
   --nine: #DDAFE9;
+  --ten: #B4E2FF;
+  --eleven: #99CCFF;
+  --twelwe: #99FF66;
+
+
 }
 
-body {
+.body1 {
  background-color: var(--seven);
   font-family: arial, sans-serif;
   margin: 0;
@@ -19,6 +20,17 @@ body {
   height: 100%;
   box-sizing: border-box;
 }
+.body2 {
+ background-color: var(--ten);
+  font-family: arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+
 
 ::-webkit-scrollbar {
   width: 3px;
@@ -37,6 +49,13 @@ overflow: hidden;
 width: 100%;
 box-shadow: 0 2px 4px 0 var(--nine);
 }
+.topnav2  {
+background-color: var(--ten);
+position: fixed;
+overflow: hidden;
+width: 100%;
+box-shadow: 0 2px 4px 0 var(--eleven);
+}
 
 .topnav a {
 float: left;
@@ -48,12 +67,31 @@ text-transform: lowercase;
 text-align: center;
 padding-left: 2em;
 font-weight: 600;
-
-
 }
+
+.topnav2 a {
+float: left;
+color: var(--six);
+text-decoration: none;
+font-size: 1.5em;
+margin: 1em;
+text-transform: lowercase;
+text-align: center;
+padding-left: 2em;
+font-weight: 600;
+}
+
+
 .topnav a:hover {
 
   border-bottom: 3px solid var(--nine);
+  color: var(--six);
+  font-style: italic;
+}
+
+.topnav2 a:hover {
+
+  border-bottom: 3px solid var(--eleven);
   color: var(--six);
   font-style: italic;
 }
@@ -61,7 +99,16 @@ font-weight: 600;
   float: right;
   padding-right: 3em;
 }
+
+.topnav-right2 {
+  float: right;
+  padding-right: 3em;
+}
 .topnav-right a {
+  font-size: 1.5em;
+}
+
+.topnav-right2 a {
   font-size: 1.5em;
 }
 
@@ -96,6 +143,42 @@ font-weight: 600;
   align-items: center;
   color: var(--six);
   background-color: var(--seven);
+  font-size: larger;
+margin-top: 80px;
+}
+
+
+.grid-container2 {
+  display: grid;
+  background-color: var(--ten);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 2em;
+  height: auto;
+  grid-template-areas: "hero-image2 hero-image2 info2 info2";
+  padding: 3em;
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#hero-image2 {
+  grid-area: hero-image2;
+  background-image: url(kawaii-gba5b60814_1280.png);
+  background-size:500px ;
+  background-color: var(--ten);
+  background-repeat: no-repeat;
+  height: 500px;
+  position:static
+
+}
+#info2 {
+  grid-area: info2;
+  text-align: center;
+  line-height: 160%;
+  align-items: center;
+  color: var(--six);
+  background-color: var(--ten);
   font-size: larger;
 margin-top: 80px;
 }
