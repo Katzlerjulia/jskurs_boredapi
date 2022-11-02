@@ -20,15 +20,7 @@
   height: 100%;
   box-sizing: border-box;
 }
-.body2 {
- background-color: var(--ten);
-  font-family: arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  height: 100%;
-  box-sizing: border-box;
-}
+
 
 
 
@@ -49,13 +41,7 @@ overflow: hidden;
 width: 100%;
 box-shadow: 0 2px 4px 0 var(--nine);
 }
-.topnav2  {
-background-color: var(--ten);
-position: fixed;
-overflow: hidden;
-width: 100%;
-box-shadow: 0 2px 4px 0 var(--eleven);
-}
+
 
 .topnav a {
 float: left;
@@ -69,17 +55,6 @@ padding-left: 2em;
 font-weight: 600;
 }
 
-.topnav2 a {
-float: left;
-color: var(--six);
-text-decoration: none;
-font-size: 1.5em;
-margin: 1em;
-text-transform: lowercase;
-text-align: center;
-padding-left: 2em;
-font-weight: 600;
-}
 
 
 .topnav a:hover {
@@ -89,26 +64,14 @@ font-weight: 600;
   font-style: italic;
 }
 
-.topnav2 a:hover {
 
-  border-bottom: 3px solid var(--eleven);
-  color: var(--six);
-  font-style: italic;
-}
 .topnav-right {
   float: right;
   padding-right: 3em;
 }
 
-.topnav-right2 {
-  float: right;
-  padding-right: 3em;
-}
-.topnav-right a {
-  font-size: 1.5em;
-}
 
-.topnav-right2 a {
+.topnav-right a {
   font-size: 1.5em;
 }
 
@@ -147,44 +110,7 @@ font-weight: 600;
 margin-top: 80px;
 }
 
-
-.grid-container2 {
-  display: grid;
-  background-color: var(--ten);
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 2em;
-  height: auto;
-  grid-template-areas: "hero-image2 hero-image2 info2 info2";
-  padding: 3em;
-  max-width: 1080px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#hero-image2 {
-  grid-area: hero-image2;
-  background-image: url(kawaii-gba5b60814_1280.png);
-  background-size:500px ;
-  background-color: var(--ten);
-  background-repeat: no-repeat;
-  height: 500px;
-  position:static
-
-}
-#info2 {
-  grid-area: info2;
-  text-align: center;
-  line-height: 160%;
-  align-items: center;
-  color: var(--six);
-  background-color: var(--ten);
-  font-size: larger;
-margin-top: 80px;
-}
-
-
-fieldset {
+.formulär {
   width: 50%;
    border: 0.15em solid var(--six);
   border-radius: 0.30em;
@@ -198,7 +124,6 @@ margin-right: auto;
 display: grid;
 box-shadow: 4px 7px 8px 5px var(--nine);
   }
-
   .search-btn {
   color: var(--six);
   background-color: white;
@@ -225,21 +150,26 @@ box-shadow: 4px 7px 8px 5px var(--nine);
   background-color: var(--seven);
   color: var(--six);
 }
-/*
-input[type="text"] {
-  border: 2px solid var(--six);
-  background-color: white;
-  border-radius: 0.15em;
-  width: 40%;
-  margin-bottom: 2em;
-}*/
+
 .forfattarsokning {
   text-align: center;
 color: white;
 font-style: italic;
 
 }
+
+
 .search-bar {
+  appearance: none;
+  background-color: #fff;
+  color: var(--six);
+  margin: 0;
+  width: 13.5em;
+  height: 1.69em;
+  border: 0.15em solid var(--six);
+  border-radius: 0.15em;
+}
+.search-country {
   appearance: none;
   background-color: #fff;
   color: var(--six);
@@ -283,7 +213,7 @@ font-style: italic;
 }
 
 
-footer {
+.footer {
 margin-top: 10em;
    bottom:0;
    width:100%;
@@ -294,6 +224,160 @@ margin-top: 10em;
    margin-left: auto;
    margin-right: auto;
 }
+
+/*Random page*/
+
+.body2 {
+ background-color: var(--ten);
+  font-family: arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.topnav2  {
+background-color: var(--ten);
+position: fixed;
+overflow: hidden;
+width: 100%;
+box-shadow: 0 2px 4px 0 var(--eleven);
+}
+
+.topnav2 a {
+float: left;
+color: var(--six);
+text-decoration: none;
+font-size: 1.5em;
+margin: 1em;
+text-transform: lowercase;
+text-align: center;
+padding-left: 2em;
+font-weight: 600;
+}
+
+.topnav2 a:hover {
+
+  border-bottom: 3px solid var(--eleven);
+  color: var(--six);
+  font-style: italic;
+}
+
+.topnav-right2 {
+  float: right;
+  padding-right: 3em;
+}
+
+.topnav-right2 a {
+  font-size: 1.5em;
+}
+
+
+.grid-container2 {
+  display: grid;
+  background-color: var(--ten);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 2em;
+  height: auto;
+  grid-template-areas: "hero-image2 hero-image2 info2 info2";
+  padding: 3em;
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#hero-image2 {
+  grid-area: hero-image2;
+  background-image: url(apple-gc29700e3e_1280.png);
+  background-size:500px ;
+  background-color: var(--ten);
+  background-repeat: no-repeat;
+  height: 500px;
+  position:static
+
+}
+#info2 {
+  grid-area: info2;
+  text-align: center;
+  line-height: 160%;
+  align-items: center;
+  color: var(--six);
+  background-color: var(--ten);
+  font-size: larger;
+margin-top: 80px;
+}
+
+.surprise {
+   color: var(--six);
+  background-color: var(--eleven);
+ height: 1.85em;
+  border: 0.15em solid var(--six);
+  border-radius: .15em;
+  width: 60%;
+  margin-top: 1em;
+  box-shadow: 4px 7px 8px 5px var(--eleven);
+
+}
+.surprise:hover{
+  color: var(--six);
+  background-color: var(--twelwe);
+}
+
+.surpriseRefresh {
+   color: var(--six);
+  background-color: var(--eleven);
+ height: 1.85em;
+  border: 0.15em solid var(--six);
+  border-radius: .15em;
+  width: 60%;
+  margin-top: 1em;
+  box-shadow: 4px 7px 8px 5px var(--eleven);
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.surpriseRefresh:hover{
+  color: var(--six);
+  background-color: var(--twelwe);
+}
+.formulär2 {
+  width: 50%;
+   border: 0.15em solid var(--six);
+  border-radius: 0.30em;
+  background-color: var(--twelwe);
+  color: var(--six);
+  padding: 30px;
+  padding-top: 1em;
+  text-align: center;
+margin-left: auto;
+margin-right: auto;
+display: grid;
+box-shadow: 4px 7px 8px 5px var(--eleven);
+  }
+
+
+.cities-tjansten {
+  text-align: center;
+color: var(--six);
+font-style: italic;
+
+}
+
+.footer2 {
+margin-top: 10em;
+   bottom:0;
+   width:100%;
+   height:60px;
+   text-align: center;
+   border-top: 3px solid var(--eleven);
+   width: 90%;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+
 @media screen and (max-width: 917px){
   .grid-container {
   display: grid;
@@ -305,6 +389,22 @@ margin-top: 10em;
   grid-template-areas:
   "hero-image hero-image hero-image hero-image"
   "info info info info";
+  padding: 3em;
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ .grid-container2 {
+  display: grid;
+  background-color: var(--ten);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 2em;
+  height: auto;
+  grid-template-areas:
+  "hero-image2 hero-image2 hero-image2 hero-image2"
+  "info2 info2 info2 info2";
   padding: 3em;
   max-width: 1080px;
   margin-left: auto;
@@ -331,6 +431,28 @@ margin-left: 9em;
   background-color: var(--seven);
   font-size: larger;
 margin-top: -5em;
+}
+
+#info2 {
+  grid-area: info2;
+  text-align: center;
+  line-height: 160%;
+  align-items: center;
+  color: var(--six);
+  background-color: var(--ten);
+  font-size: larger;
+margin-top: -5em;
+}
+#hero-image2 {
+  grid-area: hero-image2;
+  background-image: url(apple-gc29700e3e_1280.png);
+  background-size:500px ;
+  background-color: var(--ten);
+  background-repeat: no-repeat;
+margin-left: 9em;
+  height: 500px;
+
+
 }
 }
 

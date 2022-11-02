@@ -23,14 +23,57 @@
         <div class="grid-container2">
       <div id="hero-image2"></div>
       <div id="info2">
-        <h2> <i>Who wrote what?</i></h2>
-        <p>Vill du ha ett enkelt och effektivt sätt att hitta böcker som din bästa författare skrivit? Det är nu möjligt.</p>
-      <p>Här kan du enkelt skriva in vilken författare som helst och få upp böcker den har skrivit! Sök enkelt i formuläret nedan :)</p>
+        <h2> <i>What is this?</i></h2>
+        <p id="supriseText">Välkommen till denna del av hemsidan. Detta har ingenting med författar-sökning att göra. Det här är bara random fetches och saker jag fyllt upp med eftersom jag hade tid över :)</p>
+      <p id="uppdatera">Men låt inte det hindra dig från att ta del av informationen som finns att hämta här... testa fyll i formuläret nedan.</p>
+      <button class="surprise"  id="surprise"     type="btn"  onclick="surprise()">psst..klicka här för en surprise.</button>
+      <button class="surpriseRefresh"  id="surpriseRefresh"     type="btn"  onclick="refresh()">Gå tillbaka</button>
       </div>
       </div>
       </section>
     </header>
-     <footer>
+    <main>
+       <section class="form-section2">
+        <fieldset class="formulär2">
+<h1 class="cities-tjansten">Cities-tjänsten</h1>
+          <form class="cities-form" role="search" onsubmit="return false">
+             <div class="input-container_cities">
+              <input id="searchCity" class="search-country" type="text" placeholder="City:"  /> <br><br>
+              <input id="searchPopulation" class="search-country" type="text" placeholder="Population:"  /> <br><br>
+              </div>
+              <button class="search-btn" id="search-button" type="btn" onclick="getFetch()">Sök</button>
+              <button class="newSearch"  id="newSearch"     type="btn"  onclick="refresh()">Ny sökning</button>
+            </form>
+        </fieldset>
+        <div id="resultCities"></div>
+      </section>
+      </main>
+      <script src="cities.js"></script>
+      <script>
+const surpriseButton = document.getElementById('surprise')
+const textElement = document.getElementById('supriseText')
+const updateText = document.getElementById('uppdatera')
+const refreshButton = document.getElementById('surpriseRefresh')
+refreshButton.style.display ='none'
+
+function surprise(){
+  textElement.textContent = 'Knock, knock. Who is there? very long pause….Java.'
+  console.log(textElement.textContent)
+  updateText.textContent = 'Hehe... anyway du kan gå tillbaka till förra texten genom att klicka på knappen nedan :P'
+  console.log(updateText.textContent)
+  surpriseButton.style.display ='none'
+  refreshButton.style.display = 'block'
+
+}
+
+function refresh() {
+  location.reload();
+}
+
+
+
+      </script>
+     <footer class="footer2">
       <p>©juliakatzler</p>
       <p>picture cred: Image by <a href="https://pixabay.com/users/coxinhafotos-3726685/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2086023">CoxinhaFotos</a> from <a href="https://pixabay.com//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2086023">Pixabay</a></p>
     </footer>
