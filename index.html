@@ -5,16 +5,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-   <script src="index.js" defer></script>
-  <title>Are you bored?</title>
+
+  <title>who wrote what?</title>
 </head>
 <body>
 <header>
       <nav class="navbar">
         <div class="topnav">
-  <a class="active" href="index.html">Bored?</a>
+  <a class="active" href="index.html">Who wrote what?</a>
   <div class="topnav-right">
     <a href="index.html">home</a>
+    <a href="random.html">random</a>
   </div>
 </div>
       </nav>
@@ -22,42 +23,32 @@
         <div class="grid-container">
       <div id="hero-image"></div>
       <div id="info">
-        <h2> <i>Bored?</i></h2>
-      <p>Är du trött på att stirra in i väggen hela dagen för att  ändå inte hitta något att göra och sen bara gå och lägga dig? Här kan du enkelt få förslag på vad du ska hitta på en dag när du har total idétorka! <br>
-      Fyll i formuläret och få roliga förslag anpassade efter din situation :)</p>
+        <h2> <i>Who wrote what?</i></h2>
+        <p>Vill du ha ett enkelt och effektivt sätt att hitta böcker som din bästa författare skrivit? Det är nu möjligt.</p>
+      <p>Här kan du enkelt skriva in vilken författare som helst och få upp böcker den har skrivit! Sök enkelt i formuläret nedan :)</p>
       </div>
       </div>
       </section>
     </header>
     <Main>
       <section class="form-section">
-
         <fieldset class="formulär">
-<h1 class="idétorka">Låt mig hjälpa dig!</h1>
-          <form id="form">
-            <div>
-              <label for="namn" class="first-name">Namn:</label><br><br>
-              <input id="namn" type="text" name="first-name" ><br><br>
-            </div>
-            <div>
-              <label for="ensam-checkbox" class="number">Med vem vill du göra aktiviteten idag?</label> <br><br>
-              <input id="ensam-checkbox" name="radio-button" type="radio" value="radio-alone" > Mig själv
-              <input id="flera-checkbox" name="radio-button" type="radio" value="radio-many" > Med andra <br><br><br>
-            </div>
-            <div>
-              <label for="home-checkbox" class="place">Vart vill du utföra din aktivitet?</label><br><br>
-              <input id="home-checkbox" name="place-radio" type="radio" value="home" > Hemma
-              <input id="out-checkbox" name="place-radio" type="radio" value="out" > Ute <br><br><br>
-            </div>
-            <div class="get-options">
-              <input class="options-button" type="button" value="Ge mig förslag" onclick="radioOptions()">
-            </div>
-          </form>
+<h1 class="forfattarsokning">Skriv in en författare!</h1>
+          <form class="search-form" role="search" onsubmit="return false">
+             <div class="input-container">
+              <input id="searchBar" class="search-bar" type="text" placeholder="Författare:"  /> <br>
+              </div>
+              <button class="search-btn" id="search-button" type="btn" onclick="searchAuthor()">Sök</button>
+              <button class="newSearch"  id="newSearch"     type="btn"  onclick="refresh()">Ny sökning</button>
+            </form>
         </fieldset>
       </section>
+      <div id="result"></div>
+       <script src="index.js"></script>
     </Main>
     <footer>
       <p>©juliakatzler</p>
     </footer>
+
 </body>
 </html>

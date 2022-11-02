@@ -1,30 +1,53 @@
-const form = document.querySelector('#form')
-const alone = document.querySelector("#ensam-checkbox");
-const flera = document.querySelector("#flera-checkbox");
-const home = document.querySelector("#home-checkbox");
-const out = document.querySelector("#out-checkbox");
-const button = document.querySelector('.options-button')
-const addLink = document.querySelector('#option-link')
+//const results = document.getElementById('result')
+const searchButton = document.getElementById('search-button');
+const newSearchButton = document.getElementById('newSearch')
+
+function searchAuthor() {
+  const results = document.getElementById('result')
+  const selectElement = document.querySelector("#searchBar");
+  const searchAuthor = selectElement.value;
+  const fetchUrl =
+    "https://openlibrary.org/search/authors.json?q=" + searchAuthor;
 
 
 
-function radioOptions (){
-if (flera.checked && home.checked) {
-  window.location.assign("otherhome.html");
+  fetch(fetchUrl)
+    .then((response) => response.json())
+    .then((data) => {
+      data.docs.forEach((docs) => {
+        results.innerHTML += `
+      <div class="result">
+      <table class="styled-table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Top Work</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>${docs.name}</td>
+            <td><a href="${docs.top_work}">${docs.top_work}</a></td>
+        </tr>
+    </tbody>
+</table>
+      </div>
+      `;
+      });
+    })
 }
-  if (alone.checked && home.checked) {
-    window.location.assign("alonehome.html");
-  }
-  if (alone.checked && out.checked) {
-     window.location.assign("aloneout.html");
-  }
-  if (flera.checked && out.checked) {
-     window.location.assign("otherout.html");
-  }
+
+
+
+
+function refresh() {
+  location.reload();
 }
- button.addEventListener('click', radioOptions)
+
+  newSearchButton.addEventListener('click', refresh)
 
 
-function homeAndAlone() {
-   fetch("activity?type=recreational?participants=1");
- }
+  /** const authorElement = document.createElement('p')
+        authorElement.innerText = `Author Name: ${data.name}`,
+        authorElement.innerText = `Top Work: ${data.top_work}`
+        results.append(authorElement) */

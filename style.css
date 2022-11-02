@@ -108,56 +108,97 @@ fieldset {
   background-color: var(--eight);
   color: var(--six);
   padding: 30px;
+  padding-top: 1em;
   text-align: center;
 margin-left: auto;
 margin-right: auto;
-margin-top: 3em;
 display: grid;
-box-shadow: 10px 20px 16px 2px var(--nine);
+box-shadow: 4px 7px 8px 5px var(--nine);
   }
 
-  input.options-button {
+  .search-btn {
   color: var(--six);
   background-color: white;
-  border: 2px solid var(--six);
-  border-radius: 10px;
-  padding: 7px 14px;
-  font-size: large;
+ height: 1.85em;
+  border: 0.15em solid var(--six);
+  border-radius: 0.15em;
+  width: 3.6em;
+  margin-top: 1em;
 }
-input.options-button:hover {
+.search-btn:hover {
   background-color: var(--seven);
   color: var(--six);
 }
+.newSearch {
+  color: var(--six);
+  background-color: white;
+ height: 1.85em;
+  border: 0.15em solid var(--six);
+  border-radius: 0.15em;
+  width: 10em;
+  margin: 0;
+}
+.newSearch:hover {
+  background-color: var(--seven);
+  color: var(--six);
+}
+/*
 input[type="text"] {
   border: 2px solid var(--six);
   background-color: white;
   border-radius: 0.15em;
   width: 40%;
   margin-bottom: 2em;
-}
-.idétorka {
+}*/
+.forfattarsokning {
   text-align: center;
 color: white;
 font-style: italic;
 
 }
-input[type="radio"] {
+.search-bar {
   appearance: none;
   background-color: #fff;
+  color: var(--six);
   margin: 0;
-  width: 1.15em;
-  height: 1.15em;
+  width: 13.5em;
+  height: 1.69em;
   border: 0.15em solid var(--six);
   border-radius: 0.15em;
 }
-input:checked {
-    border:  0.15em solid var(--six);
-    background-color: var(--nine);
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    width: 25em;
+    box-shadow: 4px 7px 8px 5px var(--nine);
+  border: 0.15em solid var(--six);
+  border-radius: .15em;
+  margin-top: 5em;
+
 }
-label {
-  font-size: large;
-  font-weight: 800;
+
+.styled-table thead tr {
+  background-color: var(--eight);
+  color: #ffffff;
+  text-align: left;
+
 }
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+
+
+}
+
+.result{
+  display: flex;
+  justify-content: center;
+}
+
 
 footer {
 margin-top: 10em;
@@ -170,3 +211,87 @@ margin-top: 10em;
    margin-left: auto;
    margin-right: auto;
 }
+@media screen and (max-width: 917px){
+  .grid-container {
+  display: grid;
+  background-color: var(--seven);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 2em;
+  height: auto;
+  grid-template-areas:
+  "hero-image hero-image hero-image hero-image"
+  "info info info info";
+  padding: 3em;
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#hero-image {
+  grid-area: hero-image;
+  background-image: url(kawaii-gba5b60814_1280.png);
+  background-size:500px ;
+  background-color: var(--seven);
+  background-repeat: no-repeat;
+margin-left: 9em;
+  height: 500px;
+
+
+}
+#info {
+  grid-area: info;
+  text-align: center;
+  line-height: 160%;
+  align-items: center;
+  color: var(--six);
+  background-color: var(--seven);
+  font-size: larger;
+margin-top: -5em;
+}
+}
+
+.cut {
+    background-color: #15172b;
+    border-radius: 10px;
+    height: 20px;
+    left: 20px;
+    position: absolute;
+    top: -20px;
+    transform: translateY(0);
+    transition: transform 200ms;
+    width: 76px;
+  }
+
+  .cut-short {
+    width: 50px;
+  }
+
+  .input:focus ~ .cut,
+  .input:not(:placeholder-shown) ~ .cut {
+    transform: translateY(8px);
+  }
+
+   .placeholder {
+    color: #65657b;
+    font-family: sans-serif;
+    left: 20px;
+    line-height: 14px;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    top: 20px;
+  }
+  .input:focus ~ .placeholder,
+  .input:not(:placeholder-shown) ~ .placeholder {
+    transform: translateY(-30px) translateX(10px) scale(0.75);
+  }
+
+  .input:not(:placeholder-shown) ~ .placeholder {
+    color: #808097;
+  }
+
+  .input:focus ~ .placeholder {
+    color: #dc2f55;
+  }
