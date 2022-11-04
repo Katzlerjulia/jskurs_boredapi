@@ -1,0 +1,43 @@
+ [
+   {
+     "Nation": "United States",
+     "Year": "1800",
+     "Population": 5308483
+   },
+   {
+     "Nation": "United States",
+     "Year": "1850",
+     "Population": 23191876
+   },
+   {
+     "Nation": "United States",
+     "Year": "1900",
+     "Population": 76212168
+   },
+   {
+     "Nation": "United States",
+     "Year": "1950",
+     "Population": 151325798
+   },
+   {
+     "Nation": "United States",
+     "Year": "1990",
+     "Population": 248709873
+   },
+
+   {
+     "Nation": "United States",
+     "Year": "2000",
+     "Population": 281421906
+   },
+   {
+     "Nation": "United States",
+     "Year": "2010",
+     "Population": 308745538
+   },
+   {
+     "Nation": "United States",
+     "Year": "2020",
+     "Population": 326569308
+   }
+ ]

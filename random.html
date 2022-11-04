@@ -32,11 +32,13 @@
       </div>
       </section>
     </header>
+
+
     <main>
        <section class="form-section2">
         <fieldset class="formulär2">
 <h1 class="cities-tjansten">Cities-tjänsten</h1>
-          <form class="cities-form" role="search" onsubmit="return false">
+          <form method="post" action="https://avancera.app/cities/" class="cities-form" role="search" onsubmit="return false">
              <div class="input-container_cities">
               <input id="searchCity" class="search-country" type="text" placeholder="City:"  /> <br><br>
               <input id="searchPopulation" class="search-country" type="text" placeholder="Population:"  /> <br><br>
@@ -47,30 +49,55 @@
         </fieldset>
         <div id="resultCities"></div>
       </section>
+
+
+        <div class="h2chart">
+          <h2 >Nedan kan du läsa lite statisitk om USA's befolkning genom åren. Mycket intressant!</h2>
+        </div>
+      <div class="myChart">
+
+  <canvas id="myChart"></canvas>
+</div>
       </main>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
       <script src="cities.js"></script>
       <script>
-const surpriseButton = document.getElementById('surprise')
-const textElement = document.getElementById('supriseText')
-const updateText = document.getElementById('uppdatera')
-const refreshButton = document.getElementById('surpriseRefresh')
-refreshButton.style.display ='none'
+          const surpriseButton = document.getElementById('surprise')
+          const textElement = document.getElementById('supriseText')
+          const updateText = document.getElementById('uppdatera')
+          const refreshButton = document.getElementById('surpriseRefresh')
+          refreshButton.style.display ='none'
 
-function surprise(){
-  textElement.textContent = 'Knock, knock. Who is there? very long pause….Java.'
-  console.log(textElement.textContent)
-  updateText.textContent = 'Hehe... anyway du kan gå tillbaka till förra texten genom att klicka på knappen nedan :P'
-  console.log(updateText.textContent)
-  surpriseButton.style.display ='none'
-  refreshButton.style.display = 'block'
 
+        function surprise(){
+fetch('https://official-joke-api.appspot.com/random_joke')
+   .then(response => response.json())
+   .then(jokes => showJokes(jokes.results));
+
+   showJokes = jokes => {
+   const textElement = document.getElementById('supriseText')
+jokes(joke => {
+
+    textElement.textContent =  `Ett skämt: ${joke.setup}`;
+
+
+    console.log(textElement.textContent)
+  ;
+  })
 }
 
-function refresh() {
-  location.reload();
-}
+          surpriseButton.style.display ='none'
+          refreshButton.style.display = 'block'
 
+        }
+        /* textElement.textContent = 'Knock, knock. Who is there? very long pause….Java.'
+          console.log(textElement.textContent)
+          updateText.textContent = 'Hehe... anyway du kan gå tillbaka till förra texten genom att klicka på knappen nedan :P'
+          console.log(updateText.textContent)*/
 
+        function refresh() {
+          location.reload();
+          }
 
       </script>
      <footer class="footer2">

@@ -32,7 +32,7 @@
   background: var(--seven);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--eight);
+  background: var(--six);
 }
 .topnav  {
 background-color: var(--seven);
@@ -223,6 +223,7 @@ margin-top: 10em;
    width: 90%;
    margin-left: auto;
    margin-right: auto;
+   margin-bottom: 2em;
 }
 
 /*Random page*/
@@ -365,6 +366,21 @@ font-style: italic;
 
 }
 
+.myChart {
+  width: 40em;
+  height: 30em;
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+
+.h2chart {
+  color: var(--six);
+  font-size: small;
+
+  text-align: center;
+  margin-top: 10em;
+}
 .footer2 {
 margin-top: 10em;
    bottom:0;
@@ -375,6 +391,7 @@ margin-top: 10em;
    width: 90%;
    margin-left: auto;
    margin-right: auto;
+   margin-bottom: 2em;
 }
 
 
