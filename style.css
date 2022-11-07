@@ -130,7 +130,7 @@ box-shadow: 4px 7px 8px 5px var(--nine);
  height: 1.85em;
   border: 0.15em solid var(--six);
   border-radius: 0.15em;
-  width: 3.6em;
+  width: 5em;
   margin-top: 1em;
 }
 .search-btn:hover {
@@ -186,7 +186,6 @@ font-style: italic;
     font-size: 0.9em;
     font-family: sans-serif;
     width: 25em;
-    box-shadow: 4px 7px 8px 5px var(--nine);
   border: 0.15em solid var(--six);
   border-radius: .15em;
   margin-top: 5em;
@@ -194,7 +193,7 @@ font-style: italic;
 }
 
 .styled-table thead tr {
-  background-color: var(--eight);
+  background-color: var(--six);
   color: #ffffff;
   text-align: left;
 
@@ -356,6 +355,7 @@ margin-left: auto;
 margin-right: auto;
 display: grid;
 box-shadow: 4px 7px 8px 5px var(--eleven);
+margin-bottom: 5em;
   }
 
 
@@ -393,6 +393,35 @@ margin-top: 10em;
    margin-right: auto;
    margin-bottom: 2em;
 }
+.listaLänder {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.textarea {
+ margin-left: auto;
+  margin-right: auto;
+  max-width: 10em;
+}
+
+.textareajao {
+   border-radius: .15em;
+  border: 2px solid var(--six);
+  background-color: var(--twelwe);
+
+
+}
+
+.saveAndLoad {
+  color: var(--six);
+ border: 0.15em solid var(--six);
+  border-radius: 0.15em;
+  width: 5em;
+}
+.saveAndLoad:hover {
+  background-color: var(--twelwe);
+}
+
 
 
 @media screen and (max-width: 917px){
@@ -472,48 +501,3 @@ margin-left: 9em;
 
 }
 }
-
-.cut {
-    background-color: #15172b;
-    border-radius: 10px;
-    height: 20px;
-    left: 20px;
-    position: absolute;
-    top: -20px;
-    transform: translateY(0);
-    transition: transform 200ms;
-    width: 76px;
-  }
-
-  .cut-short {
-    width: 50px;
-  }
-
-  .input:focus ~ .cut,
-  .input:not(:placeholder-shown) ~ .cut {
-    transform: translateY(8px);
-  }
-
-   .placeholder {
-    color: #65657b;
-    font-family: sans-serif;
-    left: 20px;
-    line-height: 14px;
-    pointer-events: none;
-    position: absolute;
-    transform-origin: 0 50%;
-    transition: transform 200ms, color 200ms;
-    top: 20px;
-  }
-  .input:focus ~ .placeholder,
-  .input:not(:placeholder-shown) ~ .placeholder {
-    transform: translateY(-30px) translateX(10px) scale(0.75);
-  }
-
-  .input:not(:placeholder-shown) ~ .placeholder {
-    color: #808097;
-  }
-
-  .input:focus ~ .placeholder {
-    color: #dc2f55;
-  }

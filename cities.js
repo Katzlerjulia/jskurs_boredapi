@@ -1,25 +1,124 @@
 
 
-/*function getFetch() {
-  let name = document.getElementById("searchCity")
-  let number = document.getElementById("searchPopulation")
+// get
+
+function getResult() {
+  const theResults = document.getElementById("result");
+  fetch("https://avancera.app/cities/")
+    .then((response) => response.json())
+    .then((data) => {
+      data.forEach((allCities) => {
+        theResults.innerHTML += `
+      <div class="result">
+      <table class="styled-table">
+    <thead>
+        <tr>
+            <th>Stad</th>
+            <th>Befolkning</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>${allCities.name}</td>
+            <td><a href="${allCities.population}">${allCities.population}</a></td>
+        </tr>
+    </tbody>
+</table>
+      </div>
+      `;
+      })
+    })
+}
+
+var form1 = document.getElementById("myForm1");
+function handleForm(event) {
+  event.preventDefault();
+}
+form1.addEventListener("submit", handleForm);
+
+
+// POST
+function getFetch() {
+  const name = document.getElementById("name");
+  const population = document.getElementById("population");
+   const results = document.getElementById("result");
 
   fetch("https://avancera.app/cities/", {
-    body: JSON.stringify({ name: name.value, population: number }),
+    body: JSON.stringify({ name: name.value, population: parseInt(population.value) }),
     headers: {
-      'Content-Type': 'application/json'
+      "Content-Type": "application/json",
     },
     method: "POST",
   })
     .then((response) => response.json())
     .then((data) => {
       console.log(data)
-    }
-*/
+    })
+}
+
+
+var form = document.getElementById("myForm");
+function handleForm(event) {
+  event.preventDefault();
+}
+form.addEventListener("submit", handleForm);
+
+// PUT
+
+function putFunction() {
+  const id = document.getElementById("selectID");
+  const names = document.getElementById("city")
+  const populations = document.getElementById("pop")
+
+  fetch("https://avancera.app/cities/" + id.value, {
+    body: JSON.stringify({
+      id: id.value,
+      name: names.value,
+      population: parseInt(populations.value),
+    }),
+    headers: {
+      "Content-Type": "application/json",
+    },
+    method: "PUT",
+  }).then((datas) => {
+       console.log(datas)
+  });
+}
+
+var form = document.getElementById("myForm2");
+function handleForm(event) {
+  event.preventDefault();
+}
+form.addEventListener("submit", handleForm);
+
+// DELETE
+
+function deleteFunction() {
+  const idDelete = document.getElementById("idDelete");
+
+  fetch("https://avancera.app/cities/" + idDelete.value, {
+    body: JSON.stringify({
+      id: idDelete.value,
+    }),
+    headers: {
+      "Content-Type": "application/json",
+    },
+    method: "DELETE",
+  }).then((datan) => {
+    console.log(datan);
+  });
+}
+
+var forms = document.getElementById("myForm3");
+function handleForm(event) {
+  event.preventDefault();
+}
+forms.addEventListener("submit", handleForm);
 
 
 
 // chart.js
+ // kod under är okej
 
 fetch("data.json")
   .then((response) => response.json())
@@ -36,7 +135,7 @@ fetch("data.json")
       data.push(city.Population);
     }
 
-    // kod above är okej
+
     const myChart = new Chart(ctx, {
       type: "bar",
       data: {
@@ -76,62 +175,18 @@ fetch("data.json")
   });
 
 
+  // webstorage
 
-
-
-/*const searchPopulation = document.getElementById("searchPopulation")
-const searchBtn = document.getElementById("search-button")
-const newSearchBtn = document.getElementById("newSearch");
-
-
-function searchCountry() {
-  const resultCities = document.getElementById("resultCities");
-  const name = document.querySelector("#searchCountry");
-  const searchCountry = name.value
-  const dataUrl = 'https://avancera.app/cities/' + searchCountry
-
-
-  fetch(dataUrl, {
-    body: JSON.stringify({ name: name, population: population }),
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    method: 'POST'
-  })
-    .then(response => response.json())
-    .then((data) => {
-       data.forEach((cities) => {
-        results.innerHTML += `
-      <div class="result">
-      <table class="styled-table">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Top Work</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>${cities.name}</td>
-            <td><a href="${cities.population}">${cities.population}</a></td>
-        </tr>
-    </tbody>
-</table>
-      </div>
-      `;
-      });
-    })
+  const saveBtn = document.getElementById('saveBtn')
+  const loadBtn = document.getElementById('loadBtn')
+function saveCountry() {
+ const list = document.getElementById("addCountry").value;
+  localStorage.setItem("list", list);
 }
-*/
+function loadCountry() {
+  const list = localStorage.getItem("list");
+  document.getElementById("addCountry").value = list;
+}
 
-
-/*funkade för philip
-fetch('https://avancera.app/cities/', {
-    body: JSON.stringify({ name: cityNameInput.value, population: 123 }),
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    method: 'POST'
-  })
-
-  }*/
+saveBtn.addEventListener('click', saveCountry)
+loadBtn.addEventListener('click', loadCountry)
