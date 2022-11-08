@@ -24,7 +24,7 @@
       <div id="hero-image2"></div>
       <div id="info2">
         <h2> <i>What is this?</i></h2>
-        <p id="supriseText">Välkommen till denna del av hemsidan. Detta har ingenting med författar-sökning att göra. Det här är bara random fetches och saker jag fyllt upp med eftersom jag hade tid över :)</p>
+        <p id="supriseText">Välkommen till denna del av hemsidan. Det här är bara random grejer jag har lagt in.</p>
       <p id="uppdatera">Men låt inte det hindra dig från att ta del av informationen som finns att hämta här... testa fyll i formuläret nedan.</p>
       <button class="surprise"  id="surprise"     type="btn"  onclick="surprise()">psst..klicka här för en surprise.</button>
       <button class="surpriseRefresh"  id="surpriseRefresh"     type="btn"  onclick="refresh()">Gå tillbaka</button>
@@ -35,35 +35,23 @@
 
 
     <main>
-       <section class="form-section2">
-        <fieldset class="formulär2">
-<h1 class="cities-tjansten">Lista alla städer</h1>
-          <form onsubmit="getResult()" class="cities-form" id="myForm1">
-             <input class="search-btn" id="search-button" type="submit" value="Alla">
-              <button class="newSearch"  id="newSearch"     type="btn"  onclick="refresh()">Uppdatera</button>
-            </form>
-        </fieldset>
-      </section>
+      <section class="grid-container-section">
+         <section class="put-section">
 
-       <section class="form-section2">
-        <fieldset class="formulär2">
 <h1 class="cities-tjansten">Lägg till en stad</h1>
-          <form onsubmit="getFetch()" class="cities-form" id="myForm2">
-             <input type="text" id="name" placeholder="City"/>
-             <input type="text" id="population" placeholder="Population"/>
-             <input class="search-btn" id="search-button" type="submit" value="Add">
-              <button class="newSearch"  id="newSearch"     type="btn"  onclick="refresh()">Ny sökning</button>
+          <form onsubmit="getFetch()" class="cities-form" id="myForm1" id="post-form">
+             <input class="cities-input" type="text" id="name" placeholder="City"/>
+             <input class="cities-input" type="text" id="population" placeholder="Population"/>
+             <input class="postBtn" id="search-button" type="submit" value="Add">
             </form>
-        </fieldset>
       </section>
 
       <section class="put-section">
-        <fieldset class="formulär2">
           <h1 class="cities-tjansten">Ändra en stad</h1>
-         <form onsubmit="putFunction()" class="cities-form" id="myForm">
-          <label id="id" for="ID">Välj ett ID:</label>
+         <form onsubmit="putFunction()" class="cities-form" id="myForm2" id="put-form">
 
-              <select name="ID" id="selectID">
+
+              <select class="cities-input" name="ID" id="selectID">
                     <option value="5347da70-fef3-4e8f-ba49-e8010edba878">Stockholm: 5347da70-fef3-4e8f-ba49-e8010edba878</option>
                     <option value="4787e794-b3ac-4a63-bba0-03203f78e553">Göteborg: 4787e794-b3ac-4a63-bba0-03203f78e553</option>
                     <option value="4bc43d96-3e84-4695-b777-365dbed33f89">Malmö: 4bc43d96-3e84-4695-b777-365dbed33f89</option>
@@ -74,23 +62,18 @@
                     <option value="a8a70019-9382-4215-a5b3-6278eb9232c3">Helsingborg: a8a70019-9382-4215-a5b3-6278eb9232c3</option>
                     <option value="6fc1a491-3710-42f2-936d-e9bf9be4f915">Jönköping: 6fc1a491-3710-42f2-936d-e9bf9be4f915</option>
                     <option value="45428195-ab40-43d2-ad11-a62933f4a3a8">Norrköping: 45428195-ab40-43d2-ad11-a62933f4a3a8</option>
-                    <option value="1a08d06d-0849-40f6-8bb4-c175803a58b1">HejHopp: 1a08d06d-0849-40f6-8bb4-c175803a58b1</option>
-</select>
-             <input type="text" id="city" placeholder="City"/>
-             <input type="text" id="pop" placeholder="Population"/>
-             <input class="search-btn" id="search-button" type="submit" value="Change">
-              <button class="newSearch"  id="newSearch"     type="btn"  onclick="refresh()">Ny sökning</button>
+
+             <input  class="cities-input" type="text" id="city" placeholder="City"/>
+             <input  class="cities-input" type="text" id="pop" placeholder="Population"/>
+             <input class="putBtn" id="search-button" type="submit" value="Change">
             </form>
-        </fieldset>
       </section>
 
       <section class="delete-section">
-        <fieldset class="formulär2">
           <h1 class="cities-tjansten">Ta bort en stad</h1>
-         <form onsubmit="deleteFunction()" class="cities-form" id="myForm3">
-          <label id="id_delete" for="ID">Välj ett ID:</label>
+         <form onsubmit="deleteFunction()" class="cities-form" id="myForm3" id="delete-form">
 
-              <select name="ID" id="idDelete">
+              <select  class="cities-input" name="ID" id="idDelete">
                     <option value="5347da70-fef3-4e8f-ba49-e8010edba878">Stockholm: 5347da70-fef3-4e8f-ba49-e8010edba878</option>
                     <option value="4787e794-b3ac-4a63-bba0-03203f78e553">Göteborg: 4787e794-b3ac-4a63-bba0-03203f78e553</option>
                     <option value="4bc43d96-3e84-4695-b777-365dbed33f89">Malmö: 4bc43d96-3e84-4695-b777-365dbed33f89</option>
@@ -101,13 +84,22 @@
                     <option value="a8a70019-9382-4215-a5b3-6278eb9232c3">Helsingborg: a8a70019-9382-4215-a5b3-6278eb9232c3</option>
                     <option value="6fc1a491-3710-42f2-936d-e9bf9be4f915">Jönköping: 6fc1a491-3710-42f2-936d-e9bf9be4f915</option>
                     <option value="45428195-ab40-43d2-ad11-a62933f4a3a8">Norrköping: 45428195-ab40-43d2-ad11-a62933f4a3a8</option>
-                    <option value="1a08d06d-0849-40f6-8bb4-c175803a58b1">HejHopp: 1a08d06d-0849-40f6-8bb4-c175803a58b1</option>
-</select>
-             <input class="search-btn" id="search-button" type="submit" value="Delete">
-              <button class="newSearch"  id="newSearch"     type="btn"  onclick="refresh()">Ny sökning</button>
+
+             <input class="deleteBtn" class="search-btn" id="search-button" type="submit" value="Delete">
+            </form>
+      </section>
+</section>
+       <section class="get-section">
+        <fieldset class="formulär3">
+<h1 class="cities-tjansten">Lista alla städer</h1>
+          <form onsubmit="getResult()" class="cities-form" id="myForm4" >
+             <input class="allaBtn" id="search-button" type="submit" value="Alla">
+              <button class="updateBtn"  id="newSearch"     type="btn"  onclick="refresh()">Uppdatera</button>
             </form>
         </fieldset>
       </section>
+
+
        <div id="result"></div>
 
 

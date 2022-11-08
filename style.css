@@ -111,7 +111,7 @@ margin-top: 80px;
 }
 
 .formulär {
-  width: 50%;
+  width: 30%;
    border: 0.15em solid var(--six);
   border-radius: 0.30em;
   background-color: var(--eight);
@@ -126,29 +126,35 @@ box-shadow: 4px 7px 8px 5px var(--nine);
   }
   .search-btn {
   color: var(--six);
-  background-color: white;
+  background-color: var(--seven);
  height: 1.85em;
-  border: 0.15em solid var(--six);
-  border-radius: 0.15em;
+  border: .15em solid var(--six);
+  border-radius: 15em;
   width: 5em;
   margin-top: 1em;
 }
 .search-btn:hover {
   background-color: var(--seven);
   color: var(--six);
+  border: .15em solid var(--one);
+  border-radius: 15em;
+  cursor:pointer;
 }
 .newSearch {
-  color: var(--six);
-  background-color: white;
+ color: var(--six);
+  background-color: var(--seven);
  height: 1.85em;
-  border: 0.15em solid var(--six);
-  border-radius: 0.15em;
+  border: .15em solid var(--six);
+  border-radius: 15em;
   width: 10em;
-  margin: 0;
+  margin-top: 1em;
 }
 .newSearch:hover {
-  background-color: var(--seven);
+ background-color: var(--seven);
   color: var(--six);
+  border: .15em solid var(--one);
+  border-radius: 15em;
+  cursor:pointer;
 }
 
 .forfattarsokning {
@@ -161,14 +167,18 @@ font-style: italic;
 
 .search-bar {
   appearance: none;
-  background-color: #fff;
+  background-color: var(--eight);
   color: var(--six);
   margin: 0;
   width: 13.5em;
   height: 1.69em;
-  border: 0.15em solid var(--six);
+border: transparent;
+border-bottom: 2px solid var(--six);
   border-radius: 0.15em;
 }
+ .search-bar::placeholder {
+  color: white;
+ }
 .search-country {
   appearance: none;
   background-color: #fff;
@@ -314,15 +324,17 @@ margin-top: 80px;
   background-color: var(--eleven);
  height: 1.85em;
   border: 0.15em solid var(--six);
-  border-radius: .15em;
-  width: 60%;
+  border-radius: 15em;
+  width: 50%;
   margin-top: 1em;
   box-shadow: 4px 7px 8px 5px var(--eleven);
 
 }
 .surprise:hover{
   color: var(--six);
-  background-color: var(--twelwe);
+  border: 0.15em solid var(--one);
+  cursor: pointer;
+
 }
 
 .surpriseRefresh {
@@ -330,8 +342,8 @@ margin-top: 80px;
   background-color: var(--eleven);
  height: 1.85em;
   border: 0.15em solid var(--six);
-  border-radius: .15em;
-  width: 60%;
+  border-radius: 15em;
+  width: 20%;
   margin-top: 1em;
   box-shadow: 4px 7px 8px 5px var(--eleven);
   margin-left: auto;
@@ -340,13 +352,14 @@ margin-top: 80px;
 }
 .surpriseRefresh:hover{
   color: var(--six);
-  background-color: var(--twelwe);
+   border: 0.15em solid var(--one);
+   cursor: pointer;
 }
-.formulär2 {
-  width: 50%;
+.formulär3 {
+  width: 30%;
    border: 0.15em solid var(--six);
   border-radius: 0.30em;
-  background-color: var(--twelwe);
+  background-color: var(--eleven);
   color: var(--six);
   padding: 30px;
   padding-top: 1em;
@@ -357,6 +370,131 @@ display: grid;
 box-shadow: 4px 7px 8px 5px var(--eleven);
 margin-bottom: 5em;
   }
+
+  .grid-container-section {
+  display: grid;
+  background-color: var(--ten);
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 4em;
+  height: auto;
+  grid-template-areas: "post-form put-form delete-form";
+padding: 3em;
+max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#post-form {
+   grid-area: post-form;
+}
+#put-form {
+  grid-area: put-form;
+}
+
+#delete-form {
+  grid-area: delete-form;
+}
+
+.cities-input {
+   background-color: transparent;
+    border: 0px solid;
+    border-bottom: 1px solid var(--six);
+    height: 20px;
+    width: 100%;
+    margin-bottom: 1em;
+ }
+
+ .cities-input::placeholder {
+  color: var(--six);
+ }
+
+ select {
+  cursor: pointer;
+ }
+.postBtn {
+  margin-top: 3.5em;
+   color: var(--six);
+  background-color: var(--eleven);
+ height: 1.85em;
+  border: 0.15em solid var(--six);
+  border-radius: 15em;
+  width: 5em;
+  box-shadow: 4px 7px 8px 5px var(--eleven);
+}
+.postBtn:hover {
+ border: 0.15em solid var(--one);
+ background-color: var(--eleven);
+ color: var(--one);
+  cursor:pointer;
+}
+
+.putBtn {
+  margin-top: 1.5em;
+   color: var(--six);
+  background-color: var(--eleven);
+ height: 1.85em;
+  border: 0.15em solid var(--six);
+  border-radius: 15em;
+  width: 5em;
+  box-shadow: 4px 7px 8px 5px var(--eleven);
+}
+.putBtn:hover {
+ border: 0.15em solid var(--one);
+ background-color: var(--eleven);
+ color: var(--one);
+  cursor:pointer;
+}
+
+
+
+.deleteBtn {
+  margin-top: 6.5em;
+   color: var(--six);
+  background-color: var(--eleven);
+ height: 1.85em;
+  border: 0.15em solid var(--six);
+  border-radius: 15em;
+  width: 5em;
+  box-shadow: 4px 7px 8px 5px var(--eleven);
+}
+.deleteBtn:hover {
+ border: 0.15em solid var(--one);
+ background-color: var(--eleven);
+ color: var(--one);
+  cursor:pointer;
+}
+
+.allaBtn {
+   color: var(--six);
+  background-color: var(--eleven);
+ height: 1.85em;
+  border: 0.15em solid var(--six);
+  border-radius: 15em;
+  width: 5em;
+
+}
+.allaBtn:hover {
+ border: 0.15em solid var(--one);
+ background-color: var(--eleven);
+ color: var(--one);
+  cursor:pointer;
+}
+
+.updateBtn {
+  color: var(--six);
+  background-color: var(--eleven);
+ height: 1.85em;
+  border: 0.15em solid var(--six);
+  border-radius: 15em;
+  width: 7em;
+}
+.updateBtn:hover {
+ border: 0.15em solid var(--one);
+ background-color: var(--eleven);
+ color: var(--one);
+  cursor:pointer;
+}
 
 
 .cities-tjansten {
@@ -381,6 +519,8 @@ font-style: italic;
   text-align: center;
   margin-top: 10em;
 }
+
+
 .footer2 {
 margin-top: 10em;
    bottom:0;
@@ -405,9 +545,10 @@ margin-top: 10em;
 }
 
 .textareajao {
-   border-radius: .15em;
-  border: 2px solid var(--six);
-  background-color: var(--twelwe);
+   border-radius: 1em;
+
+  background-color: var(--eleven);
+border: transparent;
 
 
 }
@@ -415,11 +556,13 @@ margin-top: 10em;
 .saveAndLoad {
   color: var(--six);
  border: 0.15em solid var(--six);
-  border-radius: 0.15em;
+ background-color: var(--eleven);
+  border-radius: 15em;
   width: 5em;
 }
 .saveAndLoad:hover {
-  background-color: var(--twelwe);
+border: 0.15em solid var(--one);
+cursor: pointer;
 }
 
 

@@ -1,9 +1,7 @@
-
-
 // get
-
 function getResult() {
   const theResults = document.getElementById("result");
+
   fetch("https://avancera.app/cities/")
     .then((response) => response.json())
     .then((data) => {
@@ -15,12 +13,14 @@ function getResult() {
         <tr>
             <th>Stad</th>
             <th>Befolkning</th>
+            <th>ID</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>${allCities.name}</td>
             <td><a href="${allCities.population}">${allCities.population}</a></td>
+            <td><a href="${allCities.id}">${allCities.id}</a></td>
         </tr>
     </tbody>
 </table>
@@ -30,18 +30,10 @@ function getResult() {
     })
 }
 
-var form1 = document.getElementById("myForm1");
-function handleForm(event) {
-  event.preventDefault();
-}
-form1.addEventListener("submit", handleForm);
-
-
 // POST
 function getFetch() {
   const name = document.getElementById("name");
   const population = document.getElementById("population");
-   const results = document.getElementById("result");
 
   fetch("https://avancera.app/cities/", {
     body: JSON.stringify({ name: name.value, population: parseInt(population.value) }),
@@ -56,15 +48,7 @@ function getFetch() {
     })
 }
 
-
-var form = document.getElementById("myForm");
-function handleForm(event) {
-  event.preventDefault();
-}
-form.addEventListener("submit", handleForm);
-
 // PUT
-
 function putFunction() {
   const id = document.getElementById("selectID");
   const names = document.getElementById("city")
@@ -85,14 +69,7 @@ function putFunction() {
   });
 }
 
-var form = document.getElementById("myForm2");
-function handleForm(event) {
-  event.preventDefault();
-}
-form.addEventListener("submit", handleForm);
-
 // DELETE
-
 function deleteFunction() {
   const idDelete = document.getElementById("idDelete");
 
@@ -109,16 +86,21 @@ function deleteFunction() {
   });
 }
 
-var forms = document.getElementById("myForm3");
+// preventDefault for forms
+
+document.getElementById("myForm1").addEventListener("submit", handleForm);
+document.getElementById("myForm2").addEventListener("submit", handleForm)
+document.getElementById("myForm3").addEventListener("submit", handleForm)
+document.getElementById("myForm4").addEventListener("submit", handleForm);
 function handleForm(event) {
   event.preventDefault();
 }
-forms.addEventListener("submit", handleForm);
+
+
 
 
 
 // chart.js
- // kod under är okej
 
 fetch("data.json")
   .then((response) => response.json())
@@ -139,8 +121,8 @@ fetch("data.json")
     const myChart = new Chart(ctx, {
       type: "bar",
       data: {
-        labels: labels,
-        datasets: [
+      labels: labels,
+      datasets: [
           {
             label: "USAs befolkning genom åren",
             data: data,
@@ -165,10 +147,10 @@ fetch("data.json")
         ],
       },
       options: {
-        scales: {
-          y: {
+       scales: {
+         y: {
             beginAtZero: true,
-          },
+            },
         },
       },
     });
