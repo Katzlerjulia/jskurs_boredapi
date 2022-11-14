@@ -76,6 +76,7 @@ function deleteFunction() {
   fetch("https://avancera.app/cities/" + idDelete.value, {
     body: JSON.stringify({
       id: idDelete.value,
+
     }),
     headers: {
       "Content-Type": "application/json",

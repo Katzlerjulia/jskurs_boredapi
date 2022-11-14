@@ -34,6 +34,11 @@
 ::-webkit-scrollbar-thumb {
   background: var(--six);
 }
+
+
+/*Hem sidan, sida 1*/
+
+
 .topnav  {
 background-color: var(--seven);
 position: fixed;
@@ -125,6 +130,8 @@ margin-right: auto;
 display: grid;
 box-shadow: 4px 7px 8px 5px var(--nine);
   }
+
+
   .search-btn {
   color: var(--six);
   background-color: var(--seven);
@@ -236,7 +243,7 @@ margin-top: 10em;
    margin-bottom: 2em;
 }
 
-/*Random page*/
+/*Random page, sida 2*/
 
 .body2 {
  background-color: var(--ten);
@@ -450,7 +457,7 @@ max-width: 1080px;
 
 
 .deleteBtn {
-  margin-top: 6.5em;
+  margin-top: 7.2em;
    color: var(--six);
   background-color: var(--eleven);
  height: 1.85em;
