@@ -1,5 +1,5 @@
 // function för att använda fetch och få fram författare från sökning
-const newSearchButton = document.getElementById('newSearch')
+
 
 function searchAuthor() {
   const results = document.getElementById('result')
@@ -23,7 +23,7 @@ function searchAuthor() {
     <tbody>
         <tr>
             <td>${docs.name}</td>
-            <td><a href="${docs.top_work}">${docs.top_work}</a></td>
+            <td>${docs.top_work}</td>
         </tr>
     </tbody>
 </table>
@@ -38,4 +38,4 @@ function searchAuthor() {
 function refresh() {
   location.reload();
 }
-  newSearchButton.addEventListener('click', refresh)
+document.getElementById("newSearch").addEventListener("click", refresh);

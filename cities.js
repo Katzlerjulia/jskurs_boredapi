@@ -19,8 +19,8 @@ function getResult() {
     <tbody>
         <tr>
             <td>${allCities.name}</td>
-            <td><a href="${allCities.population}">${allCities.population}</a></td>
-            <td><a href="${allCities.id}">${allCities.id}</a></td>
+            <td>${allCities.population}</td>
+            <td>${allCities.id}</td>
         </tr>
     </tbody>
 </table>
@@ -158,9 +158,6 @@ fetch("data.json")
 
 
   // webstorage
-
-  const saveBtn = document.getElementById('saveBtn')
-  const loadBtn = document.getElementById('loadBtn')
 function saveCountry() {
  const list = document.getElementById("addCountry").value;
   localStorage.setItem("list", list);
@@ -170,5 +167,5 @@ function loadCountry() {
   document.getElementById("addCountry").value = list;
 }
 
-saveBtn.addEventListener('click', saveCountry)
-loadBtn.addEventListener('click', loadCountry)
+document.getElementById("saveBtn").addEventListener("click", saveCountry);
+document.getElementById("loadBtn").addEventListener("click", loadCountry);

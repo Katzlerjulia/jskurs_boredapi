@@ -24,8 +24,8 @@
       <div id="hero-image2"></div>
       <div id="info2">
         <h2> <i>What is this?</i></h2>
-        <p id="supriseText">Välkommen till denna del av hemsidan. Det här är bara random grejer jag har lagt in.</p>
-      <p id="uppdatera">Men låt inte det hindra dig från att ta del av informationen som finns att hämta här... testa fyll i formuläret nedan.</p>
+        <p id="supriseText">Välkommen till sida 2. Här hittar du sätt att söka efter hur många som bor i en stad, du kan lägga till en stad eller ta bort en stad. Du kan även ändra ifall du tycker det är fel information om någon stad.</p>
+      <p id="uppdatera">Testa fyll i de olika formulären nedan och klicka på "alla" för att få fram resultaten.</p>
       <button class="surprise"  id="surprise"     type="btn"  onclick="surprise()">psst..klicka här för en surprise.</button>
       <button class="surpriseRefresh"  id="surpriseRefresh"     type="btn"  onclick="refresh()">Gå tillbaka</button>
       </div>
@@ -112,6 +112,8 @@
   <canvas id="myChart"></canvas>
 </div>
 
+<!--Webstorage srkiv en lista som sparas-->
+
  <h3 class="listaLänder">Skriv en lista på de länder du vill besöka, nästa gång du uppdaterar kommer de finnas kvar!</h3>
 <div  class="textarea">
     <textarea class="textareajao" id="addCountry" rows="15" cols="14"></textarea>
@@ -123,9 +125,15 @@
 
 
 
-
+<!--Script-länk till chart.js nedan-->
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+      <!--Script-länk till all kod för cities-tjänsten och webstorage-->
+
       <script src="cities.js"></script>
+
+      <!--All kod i html-filen för att göra en fetch med skämt-->
+
       <script>
           const surpriseButton = document.getElementById('surprise')
           const textElement = document.getElementById('supriseText')
