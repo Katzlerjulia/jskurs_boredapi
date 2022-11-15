@@ -105,6 +105,10 @@ font-weight: 600;
   position:static
 
 }
+#hero-image:hover{
+  background-image: url(apple-g4e637012e_1280.png);
+
+}
 #info {
   grid-area: info;
   text-align: center;
@@ -128,7 +132,7 @@ margin-top: 80px;
 margin-left: auto;
 margin-right: auto;
 display: grid;
-box-shadow: 4px 7px 8px 5px var(--nine);
+box-shadow: 5px 5px 5px 5px var(--nine);
   }
 
 
