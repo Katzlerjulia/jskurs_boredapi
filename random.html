@@ -73,7 +73,7 @@
       <section class="delete-section">
           <h1 class="cities-tjansten">Ta bort en stad</h1>
          <form onsubmit="deleteFunction()" class="cities-form" id="myForm3" id="delete-form">
-
+              <!--
               <select  class="cities-input" name="ID" id="idDelete">
                     <option>Välj</option>
                     <option value="5347da70-fef3-4e8f-ba49-e8010edba878">Stockholm: 5347da70-fef3-4e8f-ba49-e8010edba878</option>
@@ -86,6 +86,11 @@
                     <option value="a8a70019-9382-4215-a5b3-6278eb9232c3">Helsingborg: a8a70019-9382-4215-a5b3-6278eb9232c3</option>
                     <option value="6fc1a491-3710-42f2-936d-e9bf9be4f915">Jönköping: 6fc1a491-3710-42f2-936d-e9bf9be4f915</option>
                     <option value="45428195-ab40-43d2-ad11-a62933f4a3a8">Norrköping: 45428195-ab40-43d2-ad11-a62933f4a3a8</option>
+                    -->
+
+                    <input  class="cities-input" type="text" id="idDelete" placeholder="ID"/>
+                    <input  class="cities-input" type="text" id="cityDelete" placeholder="City"/>
+                    <input  class="cities-input" type="text" id="popDelete" placeholder="Population"/>
 
              <input class="deleteBtn" class="search-btn" id="search-button" type="submit" value="Delete">
             </form>

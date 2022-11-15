@@ -72,11 +72,14 @@ function putFunction() {
 // DELETE
 function deleteFunction() {
   const idDelete = document.getElementById("idDelete");
+  const nameDelete = document.getElementById("cityDelete");
+  const populationDelete = document.getElementById("popDelete");
 
   fetch("https://avancera.app/cities/" + idDelete.value, {
     body: JSON.stringify({
       id: idDelete.value,
-
+      name: nameDelete.value,
+      population: parseInt(populationDelete.value),
     }),
     headers: {
       "Content-Type": "application/json",
