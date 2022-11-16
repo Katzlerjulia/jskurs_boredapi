@@ -560,7 +560,9 @@ margin-top: 10em;
    border-radius: 1em;
 
   background-color: var(--eleven);
-border: transparent;
+border: .15em solid var(--six);
+box-shadow: 5px 5px 5px 5px var(--eleven);
+margin-bottom: 7px;
 
 
 }

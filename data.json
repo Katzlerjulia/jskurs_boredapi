@@ -1,43 +1,53 @@
  [
    {
      "Nation": "United States",
-     "Year": "1800",
-     "Population": 5308483
+     "Year": "United Kingdom",
+     "Population": 39400000
    },
    {
      "Nation": "United States",
-     "Year": "1850",
-     "Population": 23191876
+     "Year": "Germany",
+     "Population": 39600000
    },
    {
      "Nation": "United States",
-     "Year": "1900",
-     "Population": 76212168
+     "Year": "Thailand",
+     "Population": 39800000
    },
    {
      "Nation": "United States",
-     "Year": "1950",
-     "Population": 151325798
+     "Year": "Mexico",
+     "Population": 45000000
    },
    {
      "Nation": "United States",
-     "Year": "1990",
-     "Population": 248709873
+     "Year": "Turkey",
+     "Population": 51200000
    },
 
    {
      "Nation": "United States",
-     "Year": "2000",
-     "Population": 281421906
+     "Year": "Italy",
+     "Population": 64500000
    },
    {
      "Nation": "United States",
-     "Year": "2010",
-     "Population": 308745538
+     "Year": "China",
+     "Population": 65700000
    },
    {
      "Nation": "United States",
-     "Year": "2020",
-     "Population": 326569308
+     "Year": "United States",
+     "Population": 79300000
+   },
+   {
+     "Nation": "United States",
+     "Year": "Spain",
+     "Population": 83700000
+   },
+   {
+     "Nation": "United States",
+     "Year": "France",
+     "Population": 90000000
    }
  ]

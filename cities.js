@@ -128,7 +128,7 @@ fetch("data.json")
       labels: labels,
       datasets: [
           {
-            label: "USAs befolkning genom åren",
+            label: "Turism under 2019",
             data: data,
             backgroundColor: [
               "rgba(255, 99, 132, 0.2)",
